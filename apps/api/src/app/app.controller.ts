@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 
-import { Message } from '@tayssir/api-interfaces';
+import { Request } from '@tayssir/api-interfaces';
 
 import { AppService } from './app.service';
 
@@ -8,8 +8,8 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get('hello')
-  getData(): Message {
+  @Get('requests')
+  getData(): Request[] {
     return this.appService.getData();
   }
 }
