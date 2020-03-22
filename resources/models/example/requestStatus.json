@@ -1,0 +1,1 @@
+/* possible status of a userRequest are : received(when the request is received initially), validatedByM9adem(after m9addem validation), Accepted(after Caid validation)*/

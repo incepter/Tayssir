@@ -1,0 +1,32 @@
+{
+	"requestId" : "1",
+   "fullName":" mohammed alami",
+   "cin":"BH489621",
+   "cinRecto":"<image encoded base64 >",
+   "cinVerso":"<image encoded base64 >",
+   "phone":"0661020304",
+   "address":" 15 rue zobair ben al awam, roche noir",
+   "jobAddress":" 20 rue achohada, Hay mohammadi",
+   "jobType":"serveur",
+   "city":"Casablanca",
+   "province":"ain sebaa",
+   "circle":"Roche noir",
+   "caidat":"caidat 19 belvedere",
+   "m9ademName":"hamid maarouf",
+   "assignedM9addemId":"12",
+   "processedByM9addem":"12",
+   "status":"received",
+   "rejectReason" : "if the request is rejected here is the reason why"
+   "statusUpdateDate" : "22-03-2020 15:21",
+   "creationDate" : "22-03-2020 14:01"	
+}
+
+
+
+
+
+	
+	
+	
+	
+	
