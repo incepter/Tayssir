@@ -6,6 +6,7 @@ export interface Authority {
   province: string;
   circle: string;
   caidat: string;
+  authorityChief : Authority
   role: Role;
 }
 
