@@ -5,7 +5,7 @@ export interface Authority {
   fullName: string;
   phone: string;
   caidat: Caidat;
-  authorityChief : Authority
+  authorityChief : Authority;
   role: Role;
 }
 
