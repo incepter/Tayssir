@@ -1,3 +1,5 @@
+import {Circle, Commune, Province, Region} from "./Region";
+
 export interface Request {
   id: string;
   fullName: string;
@@ -8,10 +10,10 @@ export interface Request {
   address: string;
   jobAddress: string;
   jobType: string;
-  city: string;
-  province: string;
-  circle: string;
-  caidat: string;
+  region: Region;
+  province: Province;
+  circle: Circle;
+  commune: Commune;
   authorityId: string;
   status: RequestStatus;
   assignedAuthorityId: string;
