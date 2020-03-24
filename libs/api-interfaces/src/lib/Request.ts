@@ -21,6 +21,10 @@ export interface Request {
   rejectReason: string;
   statusUpdateDate: Date;
   creationDate: Date;
+  familyStatus: string;
+  childNumber: number;
+  hasRamed: boolean;
+  ramedCardNumber:  string;
 }
 
 export enum RequestStatus {
