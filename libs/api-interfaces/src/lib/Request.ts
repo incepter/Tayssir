@@ -18,6 +18,7 @@ export interface Request {
   status: RequestStatus;
   assignedAuthorityId: string;
   processedByAuthorityId: string;
+  processedByChiefAuthorityId: string;
   rejectReason: string;
   statusUpdateDate: Date;
   creationDate: Date;

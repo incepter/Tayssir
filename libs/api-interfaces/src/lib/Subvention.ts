@@ -6,14 +6,11 @@ export interface Subvention {
   subventionCode: string;
   type: SubventionType;
   value: number;
+  request: Request;
+  processedBySubventionAgentId: string;
 }
 
 export enum SubventionType {
   MANDAT,
   EXPRESS_GAB
-}
-
-export interface RequestSubvention {
-  request: Request;
-  subvention: Subvention;
 }
