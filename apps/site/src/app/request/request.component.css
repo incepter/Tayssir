@@ -1,0 +1,27 @@
+.tayssir-title {
+    padding: 20px;
+    font-weight: bold;
+}
+
+.tayssir-tab {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.arabic-align {
+    float: right;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select, textarea {
+    font-weight: bold;
+}
+
+button {
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 0px;
+}
