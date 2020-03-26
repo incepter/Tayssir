@@ -4,7 +4,7 @@ on:
   push:
     branches: [ init-dockerfile ]
   pull_request:
-    branches: [ init-dockerfile ]
+    branches: [ master ]
 
 jobs:
 
