@@ -35,5 +35,7 @@ jobs:
           key: ${{secrets.key}}
           passphrase: ${{secrets.passphrase}}
           port: 22
-          script: whoami
+          script: |
+            docker image ls
+            docker ps
 
