@@ -32,7 +32,7 @@ jobs:
         with:
           host: 51.15.82.73
           username: root
-          key_path: ./fold
+          key_path: ./fold/mifmif-private-key.ppk
           passphrase: Password2020!
           port: 22
           script: whoami
