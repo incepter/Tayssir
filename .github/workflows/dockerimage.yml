@@ -14,18 +14,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: login into DockerHub
-      run: docker login -u ${{secrets.dockerlogin}} -p ${{secrets.dockertoken}}
 
     - name: install project
       run: yarn # will run `yarn install` command
 
       # Building API
     - name: Building api
-      uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: build:api
-
+      run: yarn build:api
 
     - name: Build api Docker image
       run: docker build . --file dockerfiles/Dockerfile-api --tag obyz/tayssir-covid-api:latest
@@ -36,11 +31,12 @@ jobs:
       run: docker push obyz/tayssir-covid-api:latest
 
     - name: Building front
-      uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: build
+      run: yarn build
 
       # Pushing images to repo
+    - name: login into DockerHub
+      run: docker login -u ${{secrets.dockerlogin}} -p ${{secrets.dockertoken}}
+
     - name: Build api Docker image
       run: docker build . --file dockerfiles/Dockerfile-front --tag obyz/tayssir-covid-front:latest
 
