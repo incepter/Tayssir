@@ -18,7 +18,7 @@ jobs:
 #      run: docker build . --file Dockerfile --tag obyz/tayssir-covid:latest
 #    - name: login into DockerHub
 #      if: success()
-#      run: docker login -u obyz -p ccb60341-6a21-485f-bde1-ac03d4fc32f3
+#      run: docker login -u {{secrets.dockerlogin}} -p {{secrets.dockertoken}}
 #    - name: push the Docker image
 #      if: success()
 #      run: docker push obyz/tayssir-covid:latest
@@ -32,8 +32,8 @@ jobs:
         with:
           host: 51.15.82.73
           username: root
-          key_path: mifmif-private-key.ppk
-          passphrase: Password2020!
+          key: {{secrets.key}}
+          passphrase: {{secrets.passphrase}}
           port: 22
           script: whoami
 
