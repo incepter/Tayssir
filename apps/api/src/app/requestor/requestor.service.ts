@@ -1,14 +1,14 @@
 import { Injectable } from '@nestjs/common';
 import { MessageService } from '@tayssir/api-interfaces';
-import { ResponseObject } from 'libs/api-interfaces/src/lib/responsObject';
-import { properties } from 'libs/api-interfaces/src/properties/properties';
+import { Response } from 'libs/api-interfaces/src/lib/Response';
+import { properties } from 'apps/api/properties';
 
 @Injectable()
 export class RequestorService {
 
     constructor(private readonly messageService: MessageService) { }
 
-    generateOTP(phoneNumber: string): ResponseObject {
+    generateOTP(phoneNumber: string): Response {
         const generatedCode = this.generatePIN();
         //TODO:save code into database
         return this.messageService.sendSms(phoneNumber, properties.messageBody + generatedCode);

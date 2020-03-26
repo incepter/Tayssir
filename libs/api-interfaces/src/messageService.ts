@@ -1,26 +1,24 @@
 import { Twilio } from 'twilio';
 
 import { Injectable } from '@nestjs/common';
-import { properties } from './properties/properties';
-import { ResponseObject } from './lib/responsObject';
+import { properties } from '../../../apps/api/properties';
+import { Response } from './lib/Response';
+import { MessageListInstanceCreateOptions } from 'twilio/lib/rest/api/v2010/account/message';
 
 @Injectable()
 export class MessageService {
 
+    sendSms(phoneNumber: string, messageBody: string): Response {
 
-    sendSms(phoneNumber: string, messageBody: string): ResponseObject {
-
+        let response: Response = {} as Response;
         // tslint:disable-next-line:prefer-const
-        let response: ResponseObject = new ResponseObject();
         const client = new Twilio(properties.accountSid, properties.authToken);
 
         if (!this.validE164(phoneNumber)) {
-            response.status = 'KO';
-            response.message = 'number must be E164 format!'
             throw new Error('number must be E164 format!')
         }
 
-        const textContent = {
+        const textContent: MessageListInstanceCreateOptions = {
             body: messageBody,
             to: phoneNumber,
             from: properties.twilioNumber
@@ -28,12 +26,14 @@ export class MessageService {
 
         client.messages.create(textContent)
             .then((message) => {
-                response.status = 'OK';
+                response.status = message.status;
+                response.message = "SMS Sent !";
+                response.code = 200;
             })
             .catch((error) => {
-                response.status = 'KO';
+                response.status = "failed";
+                response.code = 500;
                 response.message = error;
-                throw new Error('Error sending message : ' + error)
             })
 
         return response;

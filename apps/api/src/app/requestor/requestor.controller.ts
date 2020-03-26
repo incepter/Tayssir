@@ -1,8 +1,6 @@
 import { Controller, Post, Body } from '@nestjs/common';
-import { MessageService } from '@tayssir/api-interfaces';
-import { properties } from 'libs/api-interfaces/src/properties/properties';
-import { ResponseObject } from 'libs/api-interfaces/src/lib/responsObject';
 import { RequestorService } from './requestor.service';
+import { Response } from 'libs/api-interfaces/src/lib/Response';
 
 @Controller('requestor')
 export class RequestorController {
@@ -10,7 +8,7 @@ export class RequestorController {
     constructor(private readonly requestorService: RequestorService) { }
 
     @Post('generateOtp')
-    generateOtp(@Body() contact: { phoneNumber: string }): ResponseObject {
+    generateOtp(@Body() contact: { phoneNumber: string }): Response {
         return this.requestorService.generateOTP(contact.phoneNumber);
     }
 }
