@@ -23,3 +23,17 @@ jobs:
       if: success()
       run: docker push obyz/tayssir-covid:latest
 
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: run App Remotly
+        uses: appleboy/ssh-action@master
+        with:
+          host: 51.15.82.73
+          username: root
+          key_path: ./fold
+          passphrase: Password2020!
+          port: 22
+          script: whoami
+
