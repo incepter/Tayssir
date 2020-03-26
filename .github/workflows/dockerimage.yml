@@ -15,5 +15,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag obyz/tayssir-covid:latest &  docker push obyz/tayssir-covid:latest
+      run: docker build . --file Dockerfile --tag obyz/tayssir-covid:latest
+    - name: push the Docker image
+      if: success()
+      run: docker push obyz/tayssir-covid:latest
 
