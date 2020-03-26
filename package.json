@@ -6,6 +6,7 @@
     "ng": "ng",
     "nx": "nx",
     "start": "ng serve",
+    "build:api": "nx build api",
     "start:api": "nx serve api",
     "start:site": "nx serve site",
     "start:admin": "nx serve admin --port 4201",
