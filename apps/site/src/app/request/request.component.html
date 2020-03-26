@@ -5,12 +5,12 @@
         </div>
         <div class="col-10">
 
-            <h4 class="display-6 text-center tayssir-title">
+            <h1 class="display-6 text-center tayssir-title">
                 الهدف من هذه المنصة هو مساندة الفئة الهشة من المجتمع المغربي خلال محنة الجائحة العالمية لفيروس كورونا
-                المستجد ممن يمارسون مهن غير مهيكلة ، الحرة و الغير مصرح بهم لدى الصندوق الوطني للضمان الإجتماعي
-            </h4>
-
-            <div>
+                .المستجد ممن يمارسون مهن غير مهيكلة، الحرة و الغير مصرح بهم لدى الصندوق الوطني للضمان الإجتماعي
+            </h1>
+                    <a href="#fill-your-info" class="btn btn-primary guide-btn">إضغط هنا لإدخال معلوماتك</a>
+            <div id="fill-your-info">
                 <tabset [justified]="true" #staticTabs>
                     <tab heading="معلومات الموقع" disabled=true [disabled]="!jobInformationsForm.valid || !personalInformationsForm.valid">
                         <form [formGroup]="locationInformationsForm" (ngSubmit)="onSubmitForms()">
@@ -134,7 +134,7 @@
                                 <input type="file" formControlName="cinVerso" name="cinVerso" class="form-control">
                             </div>
 
-                            <button type="submit" class="btn btn-primary" [disabled]="!personalInformationsForm.valid"
+                            <button type="submit" class="btn btn-primary info-submit" [disabled]="!personalInformationsForm.valid"
                                 (click)="onSubmitPI()">اتالي</button>
 
                         </form>

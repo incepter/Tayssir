@@ -1,6 +1,41 @@
+*{
+    box-sizing: border-box;
+    color: #333333;
+    font-family: 'Markazi Text', serif;
+}
+
 .tayssir-title {
-    padding: 20px;
+    width: 90%;
+    height: auto;
+    padding: 50px;
+    margin: 50px auto;
     font-weight: bold;
+    font-size: 35px;
+    line-height: 50px;
+}
+
+.guide-btn{
+    display: block;
+    width: 250px;
+    height: auto;
+    padding: 8px;
+    margin: 100px auto;
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    outline: none;
+    letter-spacing: 1.5px;
+}
+
+.guide-btn:hover{
+    color: #333333;
+    border: 1px solid #333333;
+    background-color: transparent;
+}
+
+#fill-your-info{
+    padding: 100px 0px 100px 0px;
 }
 
 .tayssir-tab {
@@ -20,7 +55,7 @@ input, select, textarea {
     font-weight: bold;
 }
 
-button {
+.info-submit {
     font-size: 24px;
     font-weight: bold;
     border-radius: 0px;
