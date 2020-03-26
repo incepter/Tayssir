@@ -30,7 +30,6 @@ jobs:
 
 
     - name: Build api Docker image
-      uses: actions/checkout@v2
       run: docker build . --file dockerfiles/Dockerfile-api --tag obyz/tayssir-covid-api:latest
 
       # Building Front
@@ -45,7 +44,6 @@ jobs:
 
       # Pushing images to repo
     - name: Build api Docker image
-      uses: actions/checkout@v2
       run: docker build . --file dockerfiles/Dockerfile-front --tag obyz/tayssir-covid-front:latest
 
     - name: push front Docker image
