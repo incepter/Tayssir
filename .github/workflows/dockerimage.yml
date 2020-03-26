@@ -18,9 +18,7 @@ jobs:
       run: docker login -u ${{secrets.dockerlogin}} -p ${{secrets.dockertoken}}
 
     - name: install project
-      uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: install # will run `yarn install` command
+      run: yarn # will run `yarn install` command
 
       # Building API
     - name: Building api
