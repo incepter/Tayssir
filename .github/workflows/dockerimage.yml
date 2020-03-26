@@ -8,20 +8,49 @@ on:
 
 jobs:
 
-#  build:
-#
-#    runs-on: ubuntu-latest
-#
-#    steps:
-#    - uses: actions/checkout@v2
-#    - name: Build the Docker image
-#      run: docker build . --file Dockerfile --tag obyz/tayssir-covid:latest
-#    - name: login into DockerHub
-#      if: success()
-#      run: docker login -u ${{secrets.dockerlogin}} -p ${{secrets.dockertoken}}
-#    - name: push the Docker image
-#      if: success()
-#      run: docker push obyz/tayssir-covid:latest
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: login into DockerHub
+      run: docker login -u ${{secrets.dockerlogin}} -p ${{secrets.dockertoken}}
+
+    - name: install project
+    - uses: borales/actions-yarn@v2.0.0
+      with:
+        cmd: install # will run `yarn install` command
+
+      # Building API
+    - name: Building api
+    - uses: borales/actions-yarn@v2.0.0
+      with:
+        cmd: build:api
+
+
+    - name: Build api Docker image
+    - uses: actions/checkout@v2
+      run: docker build . --file dockerfiles/Dockerfile-api --tag obyz/tayssir-covid-api:latest
+
+      # Building Front
+    - name: push api Docker image
+      if: success()
+      run: docker push obyz/tayssir-covid-api:latest
+
+    - name: Building front
+    - uses: borales/actions-yarn@v2.0.0
+      with:
+        cmd: build
+
+      # Pushing images to repo
+    - name: Build api Docker image
+    - uses: actions/checkout@v2
+      run: docker build . --file dockerfiles/Dockerfile-front --tag obyz/tayssir-covid-front:latest
+
+    - name: push front Docker image
+      if: success()
+      run: docker push obyz/tayssir-covid-front:latest
 
   deploy:
     name: Deploy

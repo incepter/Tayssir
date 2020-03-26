@@ -1,7 +1,5 @@
 FROM  node:latest
-
 WORKDIR /tayssir-api
-COPY . .
-RUN yarn install
-RUN yarn build:api
+COPY ./node_modules/ ./node_modules
+COPY ./dist/ ./dist
 CMD node ./dist/apps/api/main.js
