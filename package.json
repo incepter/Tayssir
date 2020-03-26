@@ -44,10 +44,12 @@
     "@nestjs/core": "^6.8.3",
     "@nestjs/platform-express": "^6.8.3",
     "@nrwl/angular": "9.1.2",
+    "twilio": "^3.41.1",
+    "bootstrap": "^4.4.1",
     "core-js": "^2.5.4",
+    "ngx-bootstrap": "^5.5.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~6.5.0",
-    "twilio": "^3.41.1",
     "zone.js": "^0.10.2"
   },
   "devDependencies": {

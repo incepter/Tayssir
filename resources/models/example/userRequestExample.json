@@ -16,7 +16,7 @@
    "assignedM9addemId":"12",
    "processedByM9addem":"12",
    "status":"received",
-   "rejectReason" : "if the request is rejected here is the reason why"
+   "rejectReason" : "if the request is rejected here is the reason why",
    "statusUpdateDate" : "22-03-2020 15:21",
    "creationDate" : "22-03-2020 14:01"	
 }
