@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
     - name: login into DockerHub
+    - uses: actions/checkout@v2
       run: docker login -u ${{secrets.dockerlogin}} -p ${{secrets.dockertoken}}
 
     - name: install project
