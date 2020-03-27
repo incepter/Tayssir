@@ -54,11 +54,58 @@ Site is served on http://localhost:4200
 
 Admin is served on http://localhost:4201
 
-## Build
-
+## Build 
 TODO
+
+## Dockerization
+
+### To build docker images locally (Site as example) :
+* `yarn`
+* `yarn build`
+* `docker build . --file dockerfiles/Dockerfile-front --tag image-name:tag`
+* `docker run -p80:80 image-name:tag`
+
+### To use published docker images locally
+* api : `docker pull obyz/tayssir-covid-api:latest & docker run -p3333:3333 obyz/tayssir-covid-api:latest`
+* front : `docker pull obyz/tayssir-covid-front:latest & docker run -p80:80 obyz/tayssir-covid-front:latest`
+* admin : `docker pull obyz/tayssir-covid-admin:latest & docker run -p8081:8081 obyz/tayssir-covid-admin:latest`
+
+### To start all locally
+* `cd ./dockerCompose`
+* `docker-compose pull`
+* `docker-compose up` or `docker-compose up -d`
 
 ## Deployment
+### github Actions: 
+The deployment consist of 2 Jobs
+* Job 1: Build
+    * Install the project 
+    * Build the front (Site app)
+    * Build front docker image
+    * Push the docker image to the repository
+    * Build the admin 
+    * Build admin docker image
+    * Push admin docker image to the repository
+    * Build the api app
+    * Remove dev dependencies (optimization of the docker image content)
+    * Build api docker image
+    * Push api docker image
+* Job 2: Deploy
+    * Connect to the front machine via SSH
+    * Stop the docker compose
+    * Pull the newest images
+    * Start docker-compose
+    
+### Ports mapping
+|Application|base Image |internal port|exposed port|
+|---|---|---|---|
+|Api|node:13.11.0-stretch-slim|3333|3333|
+|Front(Site)|nginx:latest|80|80|
+|Admin|nginx:latest|8081|8081|
 
-TODO
+### Dependencies
+* Front (Site) and admin applications(images) both are built with location on /api path which is proxied with Nginx to the Api application (http://host:3333/api)
+    
+ 
+
 

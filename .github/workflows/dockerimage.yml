@@ -2,7 +2,7 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ init-dockerfile ]
 
 jobs:
 
@@ -29,6 +29,17 @@ jobs:
     - name: push front Docker image
       if: success()
       run: docker push obyz/tayssir-covid-front:latest
+
+      # Building Admin
+    - name: Building admin
+      run: yarn build admin
+
+    - name: Build admin Docker image
+      run: docker build . --file dockerfiles/Dockerfile-admin --tag obyz/tayssir-covid-admin:latest
+
+    - name: push admin Docker image
+      if: success()
+      run: docker push obyz/tayssir-covid-admin:latest
 
       # Building API
     - name: Building api
