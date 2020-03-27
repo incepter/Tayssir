@@ -7,7 +7,7 @@
 
             <h1 class="display-6 text-center tayssir-title">
                 الهدف من هذه المنصة هو مساندة الفئة الهشة من المجتمع المغربي خلال محنة الجائحة العالمية لفيروس كورونا
-                .المستجد ممن يمارسون مهن غير مهيكلة، الحرة و الغير مصرح بهم لدى الصندوق الوطني للضمان الإجتماعي
+                المستجد ممن يمارسون مهن غير مهيكلة، الحرة و الغير مصرح بهم لدى الصندوق الوطني للضمان الإجتماعي
             </h1>
                     <a href="#fill-your-info" class="btn btn-primary guide-btn">إضغط هنا لإدخال معلوماتك</a>
             <div id="fill-your-info">
@@ -16,13 +16,13 @@
                         <form [formGroup]="locationInformationsForm" (ngSubmit)="onSubmitForms()">
 
                             <div class="form-group">
-                                <label class="arabic-align">الاسم مقدم</label>
+                                <label class="arabic-align">إسم المقدم</label>
                                 <input formControlName="authoruty" name="authoruty" type="text" class="form-control"
-                                    placeholder="الاسم الكامل">
+                                    placeholder="الإسم الكامل">
                             </div>
 
                             <div class="form-group">
-                                <label class="arabic-align">منطقة *</label>
+                                <label class="arabic-align">المنطقة <span class="required">*</span></label>
                                 <select formControlName="region" name="region" class="form-control">
                                     <option selected>الدار البيضاء</option>
                                     <option value="1">الدار البيضاء</option>
@@ -31,7 +31,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="arabic-align">المحافظة *</label>
+                                <label class="arabic-align">المحافظة <span class="required">*</span></label>
                                 <select formControlName="province" name="province" class="form-control">
                                     <option selected>المحافظة 1</option>
                                     <option value="1">المحافظة 2</option>
@@ -40,7 +40,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="arabic-align">المدينة / الدائرة *</label>
+                                <label class="arabic-align">المدينة / الدائرة <span class="required">*</span></label>
                                 <select formControlName="city" name="city" class="form-control">
                                     <option selected>دائرة 1</option>
                                     <option value="1">دائرة 2</option>
@@ -49,7 +49,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="arabic-align">ناحية *</label>
+                                <label class="arabic-align">الناحية <span class="required">*</span></label>
                                 <select formControlName="community" name="community" class="form-control">
                                     <option selected>قيادة 1</option>
                                     <option value="1">قيادة 2</option>
@@ -57,16 +57,16 @@
                                 </select>
                             </div>
 
-                            <button type="submit" class="btn btn-success" [disabled]="!jobInformationsForm.valid"
+                            <button type="submit" class="btn btn-success send-btn" [disabled]="!jobInformationsForm.valid"
                                 (click)="onSubmitJI()">أرسل</button>
 
-                            <button class="btn btn-primary" (click)="goToJobInformations()">سابق</button>
+                            <button class="btn btn-primary return-back" (click)="goToJobInformations()">سابق</button>
                         </form>
                     </tab>
                     <tab heading="معلومات وظيفة" [disabled]="!personalInformationsForm.valid">
                         <form [formGroup]="jobInformationsForm" (ngSubmit)="onSubmitJI()">
                             <div class="form-group">
-                                <label class="arabic-align">مهنة *</label>
+                                <label class="arabic-align">المهنة <span class="required">*</span></label>
                                 <select class="form-control" formControlName="jobType" name="jobType">
                                     <option selected>نجار</option>
                                     <option value="1">حداد</option>
@@ -75,67 +75,67 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="arabic-align">عنوان مهنة *</label>
+                                <label class="arabic-align">عنوان المهنة <span class="required">*</span></label>
                                 <textarea formControlName="jobAddress" name="jobAddress" type="text" class="form-control"
                                     placeholder="عنوان مهنة"></textarea>
                             </div>
 
-                            <button type="submit" class="btn btn-primary" [disabled]="!jobInformationsForm.valid"
-                                (click)="onSubmitJI()">اتالي</button>
+                            <button type="submit" class="btn btn-primary next-btn" [disabled]="!jobInformationsForm.valid"
+                                (click)="onSubmitJI()">التالي</button>
 
-                            <button class="btn btn-primary" (click)="goToPersonalInformations()">سابق</button>
+                            <button class="btn btn-primary return-back" (click)="goToPersonalInformations()">سابق</button>
 
                         </form>
                     </tab>
                     <tab heading="معلومات شخصية" active=true>
                         <form [formGroup]="personalInformationsForm" (ngSubmit)="onSubmitPI()">
                             <div class="form-group">
-                                <label class="arabic-align">الاسم الكامل *</label>
+                                <label class="arabic-align">الإسم الكامل <span class="required">*</span></label>
                                 <input type="text" formControlName="fullName" name="fullName" class="form-control"
-                                    placeholder="الاسم الكامل" required minlength="4" [ngClass]="{ 'is-invalid': (personalInformationsControl.fullName.dirty || personalInformationsControl.fullName.touched) && personalInformationsControl.fullName.invalid }">
+                                    placeholder="الإسم الكامل" required minlength="4" [ngClass]="{ 'is-invalid': (personalInformationsControl.fullName.dirty || personalInformationsControl.fullName.touched) && personalInformationsControl.fullName.invalid }">
 
                                 <div class="invalid-feedback" *ngIf="(personalInformationsControl.fullName.dirty || personalInformationsControl.fullName.touched) && personalInformationsControl.fullName.invalid">
-                                    الاسم الكامل إجباري
+                                    الإسم الكامل إجباري
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="arabic-align">عنوان *</label>
+                                <label class="arabic-align">العنوان <span class="required">*</span></label>
                                 <textarea type="text" formControlName="address" name="address" class="form-control"
-                                    placeholder="عنوان" required [ngClass]="{ 'is-invalid': (personalInformationsControl.address.dirty || personalInformationsControl.address.touched) && personalInformationsControl.address.invalid }"></textarea>
+                                    placeholder="العنوان" required [ngClass]="{ 'is-invalid': (personalInformationsControl.address.dirty || personalInformationsControl.address.touched) && personalInformationsControl.address.invalid }"></textarea>
 
                                 <div class="invalid-feedback" *ngIf="(personalInformationsControl.address.dirty || personalInformationsControl.address.touched) && personalInformationsControl.address.invalid">
-                                    عنوان إجباري
+                                    العنوان إجباري
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="arabic-align">هاتف *</label>
+                                <label class="arabic-align">الهاتف <span class="required">*</span></label>
                                 <input type="text" formControlName="phone" name="phone" class="form-control"
-                                    placeholder="هاتف" required [ngClass]="{ 'is-invalid': (personalInformationsControl.phone.dirty || personalInformationsControl.phone.touched) && personalInformationsControl.phone.invalid }">
+                                    placeholder="الهاتف" required [ngClass]="{ 'is-invalid': (personalInformationsControl.phone.dirty || personalInformationsControl.phone.touched) && personalInformationsControl.phone.invalid }">
 
                                 <div class="invalid-feedback" *ngIf="(personalInformationsControl.phone.dirty || personalInformationsControl.phone.touched) && personalInformationsControl.phone.invalid">
-                                    (06********) هاتف إجباري
+                                    (06********) الهاتف إجباري
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="arabic-align">رقم البطاقة وطنية *</label>
-                                <input type="text" formControlName="cin" name="cin" class="form-control" placeholder="رقم البطاقة وطنية"
+                                <label class="arabic-align">رقم البطاقة الوطنية <span class="required">*</span></label>
+                                <input type="text" formControlName="cin" name="cin" class="form-control" placeholder="رقم البطاقة الوطنية"
                                     required [ngClass]="{ 'is-invalid': (personalInformationsControl.cin.dirty || personalInformationsControl.cin.touched) && personalInformationsControl.cin.invalid }">
 
                                 <div class="invalid-feedback" *ngIf="(personalInformationsControl.cin.dirty || personalInformationsControl.cin.touched) && personalInformationsControl.cin.invalid">
-                                    (********) رقم البطاقة وطنية إجباري
+                                    (********) رقم البطاقة الوطنية إجباري
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="arabic-align">الوجه أمامي البطاقة وطنية</label>
+                                <label class="arabic-align">الوجه الأمامي للبطاقة الوطنية </label>
                                 <input type="file" formControlName="cinRecto" name="cinRecto" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label class="arabic-align">الوجه خلفي البطاقة وطنية</label>
+                                <label class="arabic-align">الوجه الخلفي للبطاقة الوطنية </label>
                                 <input type="file" formControlName="cinVerso" name="cinVerso" class="form-control">
                             </div>
 
                             <button type="submit" class="btn btn-primary info-submit" [disabled]="!personalInformationsForm.valid"
-                                (click)="onSubmitPI()">اتالي</button>
+                                (click)="onSubmitPI()">التالي</button>
 
                         </form>
                     </tab>
