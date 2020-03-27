@@ -2,7 +2,7 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ init-dockerfile ]
+    branches: [ master ]
 
 jobs:
 
@@ -23,7 +23,7 @@ jobs:
     - name: Building front
       run: yarn build
 
-    - name: Build api Docker image
+    - name: Build front Docker image
       run: docker build . --file dockerfiles/Dockerfile-front --tag obyz/tayssir-covid-front:latest
 
     - name: push front Docker image
