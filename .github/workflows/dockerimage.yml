@@ -17,7 +17,7 @@ jobs:
       run: docker login -u ${{secrets.dockerlogin}} -p ${{secrets.dockertoken}}
 
     - name: install project
-      run: yarn install --production=true # will run `yarn install` command
+      run: yarn install # will run `yarn install` command
 
       # Building API
     - name: Building api
