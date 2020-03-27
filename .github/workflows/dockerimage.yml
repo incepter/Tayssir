@@ -3,8 +3,6 @@ name: Docker Image CI
 on:
   push:
     branches: [ init-dockerfile ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
 
@@ -15,8 +13,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: login into DockerHub
+      run: docker login -u ${{secrets.dockerlogin}} -p ${{secrets.dockertoken}}
+
     - name: install project
-      run: yarn # will run `yarn install` command
+      run: yarn install --production=true # will run `yarn install` command
 
       # Building API
     - name: Building api
@@ -25,17 +26,13 @@ jobs:
     - name: Build api Docker image
       run: docker build . --file dockerfiles/Dockerfile-api --tag obyz/tayssir-covid-api:latest
 
-      # Building Front
     - name: push api Docker image
       if: success()
       run: docker push obyz/tayssir-covid-api:latest
 
+      # Building Front
     - name: Building front
       run: yarn build
-
-      # Pushing images to repo
-    - name: login into DockerHub
-      run: docker login -u ${{secrets.dockerlogin}} -p ${{secrets.dockertoken}}
 
     - name: Build api Docker image
       run: docker build . --file dockerfiles/Dockerfile-front --tag obyz/tayssir-covid-front:latest
