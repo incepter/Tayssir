@@ -7,7 +7,7 @@ on:
 jobs:
 
   build:
-
+    name: Build
     runs-on: ubuntu-latest
 
     steps:
@@ -18,17 +18,6 @@ jobs:
 
     - name: install project
       run: yarn install # will run `yarn install` command
-
-      # Building API
-    - name: Building api
-      run: yarn build:api
-
-    - name: Build api Docker image
-      run: docker build . --file dockerfiles/Dockerfile-api --tag obyz/tayssir-covid-api:latest
-
-    - name: push api Docker image
-      if: success()
-      run: docker push obyz/tayssir-covid-api:latest
 
       # Building Front
     - name: Building front
@@ -41,8 +30,23 @@ jobs:
       if: success()
       run: docker push obyz/tayssir-covid-front:latest
 
+      # Building API
+    - name: Building api
+      run: yarn build:api
+
+    - name: Removing dev dependencies
+      run: yarn install --production --ignore-scripts
+
+    - name: Build api Docker image
+      run: docker build . --file dockerfiles/Dockerfile-api --tag obyz/tayssir-covid-api:latest
+
+    - name: push api Docker image
+      if: success()
+      run: docker push obyz/tayssir-covid-api:latest
+
   deploy:
     name: Deploy
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: run App Remotly
@@ -56,4 +60,7 @@ jobs:
           script: |
             docker image ls
             docker ps
-
+            cd /home/dockerCompose/
+            docker-compose down
+            docker-compose pull
+            docker-compose up -d
