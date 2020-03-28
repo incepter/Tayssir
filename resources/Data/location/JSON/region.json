@@ -1,73 +1,73 @@
 [
   {
-    "id": "01",
-    "code": "01.",
+    "code": "01",
+    "id": "01.",
     "name": "Tanger-Tetouan-Al Hoceima",
     "name_ar": "طنجة تطوان، الحسيمة"
   },
   {
-    "id": "02",
-    "code": "02.",
+    "code": "02",
+    "id": "02.",
     "name": "Oriental",
     "name_ar": "شرقي"
   },
   {
-    "id": "03",
-    "code": "03.",
+    "code": "03",
+    "id": "03.",
     "name": "Fès-Meknès",
     "name_ar": "فاس-مكناس"
   },
   {
-    "id": "04",
-    "code": "04.",
+    "code": "04",
+    "id": "04.",
     "name": "Rabat-Salé-Kénitra",
     "name_ar": "القنيطرة-الرباط سلا"
   },
   {
-    "id": "05",
-    "code": "05.",
+    "code": "05",
+    "id": "05.",
     "name": "Béni Mellal-Khénifra",
     "name_ar": "بني ملال-خنيفرة"
   },
   {
-    "id": "06",
-    "code": "06.",
+    "code": "06",
+    "id": "06.",
     "name": "Grand Casablanca-Settat",
     "name_ar": "الدار البيضاء-سطات"
   },
   {
-    "id": "07",
-    "code": "07.",
+    "code": "07",
+    "id": "07.",
     "name": "Marrakech-Safi",
     "name_ar": "مراكش الصافي"
   },
   {
-    "id": "08",
-    "code": "08.",
+    "code": "08",
+    "id": "08.",
     "name": "Drâa-Tafilalet",
     "name_ar": "درعة تافيلالت"
   },
   {
-    "id": "09",
-    "code": "09.",
+    "code": "09",
+    "id": "09.",
     "name": "Souss-Massa",
     "name_ar": "سوس ماسة"
   },
   {
-    "id": 10,
-    "code": "10.",
+    "code": 10,
+    "id": "10.",
     "name": "Guelmim-Oued Noun",
     "name_ar": "كلميم واد نون"
   },
   {
-    "id": 11,
-    "code": "11.",
+    "code": 11,
+    "id": "11.",
     "name": "Laayoune-Sakia El Hamra",
     "name_ar": "العيون الساقية الحمراء"
   },
   {
-    "id": 12,
-    "code": "12.",
+    "code": 12,
+    "id": "12.",
     "name": "Eddakhla-Oued Eddahab",
     "name_ar": "الداخلة - وادي الذهب‎‎"
   }

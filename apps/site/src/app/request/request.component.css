@@ -1,6 +1,41 @@
+*{
+    box-sizing: border-box;
+    color: #333333;
+    font-family: 'Markazi Text', serif;
+}
+
 .tayssir-title {
-    padding: 20px;
+    width: 90%;
+    height: auto;
+    padding: 50px;
+    margin: 50px auto;
     font-weight: bold;
+    font-size: 35px;
+    line-height: 50px;
+}
+
+.guide-btn{
+    display: block;
+    width: 250px;
+    height: auto;
+    padding: 8px;
+    margin: 100px auto;
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    outline: none;
+    letter-spacing: 1.5px;
+}
+
+.guide-btn:hover{
+    color: #333333;
+    border: 1px solid #333333;
+    background-color: transparent;
+}
+
+#fill-your-info{
+    padding: 100px 0px 100px 0px;
 }
 
 .tayssir-tab {
@@ -8,20 +43,60 @@
     font-weight: bold;
 }
 
+.required{
+    color: red;
+}
+
+form{
+    margin-top: 100px;
+}
+
 .arabic-align {
     float: right;
 }
 
 label {
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+label span{
+    font-weight: 500;
 }
 
 input, select, textarea {
-    font-weight: bold;
+    font-size: 20px;
+    direction: rtl;
+    margin-bottom: 30px;
+    border: 1px solid #333333;
 }
 
-button {
+input[type="file"]{
+    padding-top: 2.5px;
+}
+
+.info-submit, .next-btn, .send-btn {
+    width: 75px;
+    padding: 3px 0px 3px 0px;
+    font-family: "Markazi Text", serif;
     font-size: 24px;
-    font-weight: bold;
-    border-radius: 0px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    outline: none;
+    color: #ffffff;
+}
+
+.return-back{
+    margin-left: 10px;
+    width: 75px;
+    padding: 3px 0px 3px 0px;
+    font-family: "Markazi Text", serif;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    outline: none;
+    color: #ffffff;
 }

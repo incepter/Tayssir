@@ -31,6 +31,6 @@ export interface Request {
 export enum RequestStatus {
   RECEIVED,
   VALIDATED,
-  ACCEPTED,
+  CONFIRMED,
   REJECTED
 }

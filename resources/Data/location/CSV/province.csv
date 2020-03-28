@@ -1,76 +1,76 @@
-region_id,id,code,name,name_ar
-01,051,01.051.,Province: Al Hoceima,المحافظة: الحسيمة
-01,151,01.151.,Province: Chefchaouen, شفشاون
-01,227,01.227.,Province: Fahs-Anjra        , الفحص أنجرة
-01,331,01.331.,Province: Larache, العرائش
-01,405,01.405.,Province: Ouezzane, وزان
-01,511,01.511.,Préfecture: Tanger-Assilah, طنجة-أصيلة
-01,571,01.571.,Province: Tétouan, تطوان
-01,573,01.573.,Préfecture: M'Diq-Fnideq, المضيق الفنيدق
-02,113,02.113.,Province: Berkane, بركان
-02,167,02.167.,Province: Driouch, الدريوش
-02,251,02.251.,Province: Figuig, فكيك
-02,265,02.265.,Province: Guercif,غرسيف
-02,275,02.275.,Province: Jerada,جرادة
-02,381,02.381.,Province: Nador,الناظور
-02,411,02.411.,Préfecture: Oujda-Angad,جدة-أنجاد
-02,533,02.533.,Province: Taourirt, تاوريرت
-03,061,03.061.,Préfecture: Meknès,مكناس
-03,131,03.131.,Province: Boulemane,بولمان
-03,171,03.171.,Province: El  Hajeb,الحاجب
-03,231,03.231.,Préfecture: Fès,فاس
-03,271,03.271.,Province: Ifrane,إفران
-03,451,03.451.,Province: Sefrou,صفرو
-03,531,03.531.,Province: Taounate,تاونات
-03,561,03.561.,Province: Taza,تازة
-03,591,03.591.,Province: Moulay Yacoub,مولاي يعقوب
-04,281,04.281.,Province: Kénitra,القنيطرة
-04,291,04.291.,Province: Khémisset,الخميسات
-04,421,04.421.,Préfecture: Rabat,الرباط
-04,441,04.441.,Préfecture: Salé,سلا
-04,481,04.481.,Province: Sidi Kacem,سيدي قاسم
-04,491,04.491.,Province: Sidi Slimane,سيدي سليمان
-04,501,04.501.,Préfecture: Skhirate- Témara,الصخيرات - تمارة
-05,081,05.081.,Province: Azilal,أزيلال
-05,091,05.091.,Province: Béni Mellal, بني ملال
-05,255,05.255.,Province: Fquih Ben Salah, الفقيه بنصالح
-05,301,05.301.,Province: Khénifra,خنيفرة
-05,311,05.311.,Province: Khouribga,خريبكة
-06,111,06.111.,Province: Benslimane,بنسليمان
-06,117,06.117.,Province: Berrechid,برشيد
-06,141,06.141.,Préfecture: Casablanca,الدار البيضاء
-06,181,06.181.,Province: El Jadida,الجديدة
-06,355,06.355.,Province: Médiouna,مديونة
-06,371,06.371.,Préfecture: Mohammadia,المحمدية
-06,385,06.385.,Province: Nouaceur,النواصر
-06,461,06.461.,Province: Settat, سطات
-06,467,06.467.,Province: Sidi Bennour, سيدي بنور
-07,041,07.041.,Province: Al  Haouz,الحوز
-07,161,07.161.,Province: Chichaoua, شيشاوا
-07,191,07.191.,Province: El Kelâa des  Sraghna, قلعة السراغنة
-07,211,07.211.,Province: Essaouira,الصويرة
-07,351,07.351.,Préfecture: Marrakech,مراكش
-07,427,07.427.,Province: Rehamna,الرحامنة
-07,431,07.431.,Province: Safi,الصافي
-07,585,07.585.,Province: Youssoufia,اليوسفية
-08,201,08.201.,Province: Errachidia,الرشيدية
-08,363,08.363.,Province: Midelt, ميدلت
-08,401,08.401.,Province: Ouarzazate, ورزازات
-08,577,08.577.,Province: Tinghir,تنغير
-08,587,08.587.,Province: Zagora,زاكورة
-09,001,09.001.,Préfecture: Agadir-Ida -Ou-Tanane,أكادير - أدا وتنان
-09,163,09.163.,Province: Chtouka- Ait Baha,شتوكة آيت باها
-09,273,09.273.,Préfecture: Inezgane- Ait Melloul,محافظة: أيت ملول -إنزكان 
-09,541,09.541.,Province: Taroudannt, تارودانت
-09,551,09.551.,Province: Tata, طاطا
-09,581,09.581.,Province: Tiznit,تزنيت
-10,071,10.071.,Province: Assa-Zag, أسا الزاك
-10,261,10.261.,Province: Guelmim, كلميم
-10,473,10.473.,Province: Sidi Ifni, سيدي إفني
-10,521,10.521.,Province: Tan-Tan, طانطان
-11,121,11.121.,Province: Boujdour, بوجدور
-11,221,11.221.,Province: Es-Semara,السمارة
-11,321,11.321.,Province: Laâyoune, العيون
-11,537,11.537.,Province: Tarfaya, طرفاية
-12,066,12.066.,Province: Aousserd, أوسرد
-12,391,12.391.,Province: Oued Ed-Dahab, وادي الذهب
+region_id,code,id,name,name_ar
+01.,051,01.051.,Province: Al Hoceima,المحافظة: الحسيمة
+01.,151,01.151.,Province: Chefchaouen, شفشاون
+01.,227,01.227.,Province: Fahs-Anjra        , الفحص أنجرة
+01.,331,01.331.,Province: Larache, العرائش
+01.,405,01.405.,Province: Ouezzane, وزان
+01.,511,01.511.,Préfecture: Tanger-Assilah, طنجة-أصيلة
+01.,571,01.571.,Province: Tétouan, تطوان
+01.,573,01.573.,Préfecture: M'Diq-Fnideq, المضيق الفنيدق
+02.,113,02.113.,Province: Berkane, بركان
+02.,167,02.167.,Province: Driouch, الدريوش
+02.,251,02.251.,Province: Figuig, فكيك
+02.,265,02.265.,Province: Guercif,غرسيف
+02.,275,02.275.,Province: Jerada,جرادة
+02.,381,02.381.,Province: Nador,الناظور
+02.,411,02.411.,Préfecture: Oujda-Angad,جدة-أنجاد
+02.,533,02.533.,Province: Taourirt, تاوريرت
+03.,061,03.061.,Préfecture: Meknès,مكناس
+03.,131,03.131.,Province: Boulemane,بولمان
+03.,171,03.171.,Province: El  Hajeb,الحاجب
+03.,231,03.231.,Préfecture: Fès,فاس
+03.,271,03.271.,Province: Ifrane,إفران
+03.,451,03.451.,Province: Sefrou,صفرو
+03.,531,03.531.,Province: Taounate,تاونات
+03.,561,03.561.,Province: Taza,تازة
+03.,591,03.591.,Province: Moulay Yacoub,مولاي يعقوب
+04.,281,04.281.,Province: Kénitra,القنيطرة
+04.,291,04.291.,Province: Khémisset,الخميسات
+04.,421,04.421.,Préfecture: Rabat,الرباط
+04.,441,04.441.,Préfecture: Salé,سلا
+04.,481,04.481.,Province: Sidi Kacem,سيدي قاسم
+04.,491,04.491.,Province: Sidi Slimane,سيدي سليمان
+04.,501,04.501.,Préfecture: Skhirate- Témara,الصخيرات - تمارة
+05.,081,05.081.,Province: Azilal,أزيلال
+05.,091,05.091.,Province: Béni Mellal, بني ملال
+05.,255,05.255.,Province: Fquih Ben Salah, الفقيه بنصالح
+05.,301,05.301.,Province: Khénifra,خنيفرة
+05.,311,05.311.,Province: Khouribga,خريبكة
+06.,111,06.111.,Province: Benslimane,بنسليمان
+06.,117,06.117.,Province: Berrechid,برشيد
+06.,141,06.141.,Préfecture: Casablanca,الدار البيضاء
+06.,181,06.181.,Province: El Jadida,الجديدة
+06.,355,06.355.,Province: Médiouna,مديونة
+06.,371,06.371.,Préfecture: Mohammadia,المحمدية
+06.,385,06.385.,Province: Nouaceur,النواصر
+06.,461,06.461.,Province: Settat, سطات
+06.,467,06.467.,Province: Sidi Bennour, سيدي بنور
+07.,041,07.041.,Province: Al  Haouz,الحوز
+07.,161,07.161.,Province: Chichaoua, شيشاوا
+07.,191,07.191.,Province: El Kelâa des  Sraghna, قلعة السراغنة
+07.,211,07.211.,Province: Essaouira,الصويرة
+07.,351,07.351.,Préfecture: Marrakech,مراكش
+07.,427,07.427.,Province: Rehamna,الرحامنة
+07.,431,07.431.,Province: Safi,الصافي
+07.,585,07.585.,Province: Youssoufia,اليوسفية
+08.,201,08.201.,Province: Errachidia,الرشيدية
+08.,363,08.363.,Province: Midelt, ميدلت
+08.,401,08.401.,Province: Ouarzazate, ورزازات
+08.,577,08.577.,Province: Tinghir,تنغير
+08.,587,08.587.,Province: Zagora,زاكورة
+09.,001,09.001.,Préfecture: Agadir-Ida -Ou-Tanane,أكادير - أدا وتنان
+09.,163,09.163.,Province: Chtouka- Ait Baha,شتوكة آيت باها
+09.,273,09.273.,Préfecture: Inezgane- Ait Melloul,محافظة: أيت ملول -إنزكان 
+09.,541,09.541.,Province: Taroudannt, تارودانت
+09.,551,09.551.,Province: Tata, طاطا
+09.,581,09.581.,Province: Tiznit,تزنيت
+10.,071,10.071.,Province: Assa-Zag, أسا الزاك
+10.,261,10.261.,Province: Guelmim, كلميم
+10.,473,10.473.,Province: Sidi Ifni, سيدي إفني
+10.,521,10.521.,Province: Tan-Tan, طانطان
+11.,121,11.121.,Province: Boujdour, بوجدور
+11.,221,11.221.,Province: Es-Semara,السمارة
+11.,321,11.321.,Province: Laâyoune, العيون
+11.,537,11.537.,Province: Tarfaya, طرفاية
+12.,066,12.066.,Province: Aousserd, أوسرد
+12.,391,12.391.,Province: Oued Ed-Dahab, وادي الذهب
