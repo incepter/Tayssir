@@ -1,0 +1,5 @@
+FROM node:13.11.0-stretch-slim
+WORKDIR /tayssir-api
+COPY ./node_modules/ ./node_modules
+COPY ./dist/ ./dist
+CMD node ./dist/apps/api/main.js

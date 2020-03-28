@@ -1,0 +1,77 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: login into DockerHub
+      run: docker login -u ${{secrets.dockerlogin}} -p ${{secrets.dockertoken}}
+
+    - name: install project
+      run: yarn install # will run `yarn install` command
+
+      # Building Front
+    - name: Building front
+      run: yarn build
+
+    - name: Build front Docker image
+      run: docker build . --file dockerfiles/Dockerfile-front --tag obyz/tayssir-covid-front:latest
+
+    - name: push front Docker image
+      if: success()
+      run: docker push obyz/tayssir-covid-front:latest
+
+      # Building Admin
+    - name: Building admin
+      run: yarn build admin
+
+    - name: Build admin Docker image
+      run: docker build . --file dockerfiles/Dockerfile-admin --tag obyz/tayssir-covid-admin:latest
+
+    - name: push admin Docker image
+      if: success()
+      run: docker push obyz/tayssir-covid-admin:latest
+
+      # Building API
+    - name: Building api
+      run: yarn build:api
+
+    - name: Removing dev dependencies
+      run: yarn install --production --ignore-scripts
+
+    - name: Build api Docker image
+      run: docker build . --file dockerfiles/Dockerfile-api --tag obyz/tayssir-covid-api:latest
+
+    - name: push api Docker image
+      if: success()
+      run: docker push obyz/tayssir-covid-api:latest
+
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: run App Remotly
+        uses: appleboy/ssh-action@master
+        with:
+          host: 51.15.82.73
+          username: root
+          key: ${{secrets.key}}
+          passphrase: ${{secrets.passphrase}}
+          port: 22
+          script: |
+            docker image ls
+            docker ps
+            cd /home/dockerCompose/
+            docker-compose down
+            docker-compose pull
+            docker-compose up -d

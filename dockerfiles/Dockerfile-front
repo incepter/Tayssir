@@ -1,0 +1,4 @@
+FROM nginx
+
+COPY ./dist/apps/site/ /usr/share/nginx/html/
+COPY ./nginx/nginx-front.conf /etc/nginx/conf.d/default.conf
