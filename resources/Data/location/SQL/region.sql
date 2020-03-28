@@ -1,11 +1,11 @@
-CREATE TABLE IF NOT EXISTS "region" (
-"code"  VARCHAR (2)  NULL,
-"id"  VARCHAR (3)  NULL,
-"name"  VARCHAR (50)  NULL,
-"name_ar"  VARCHAR (50)  NULL
+CREATE TABLE IF NOT EXISTS REGION (
+CODE  VARCHAR (2)  NULL,
+ID  VARCHAR (3)  NULL,
+NAME  VARCHAR (50)  NULL,
+NAME_AR  VARCHAR (50)  NULL
 );
 
-INSERT INTO region VALUES
+INSERT INTO REGION VALUES
 (01,'01.','Tanger-Tetouan-Al Hoceima','طنجة تطوان، الحسيمة'),
 (02,'02.','Oriental','شرقي'),
 (03,'03.','Fès-Meknès','فاس-مكناس'),

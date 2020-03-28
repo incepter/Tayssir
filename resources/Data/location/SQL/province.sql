@@ -1,12 +1,12 @@
-CREATE TABLE IF NOT EXISTS "province" (
-"region_id" VARCHAR (3) NULL,
-"code" VARCHAR (3) NULL,
-"id" VARCHAR (7) NULL,
-"name" VARCHAR (50) NULL,
-"name_ar" VARCHAR (50) NULL
+CREATE TABLE IF NOT EXISTS PROVINCE (
+REGION_ID VARCHAR (3) NULL,
+CODE VARCHAR (3) NULL,
+ID VARCHAR (7) NULL,
+NAME VARCHAR (50) NULL,
+NAME_AR VARCHAR (50) NULL
 );
 
-INSERT INTO province VALUES
+INSERT INTO PROVINCE VALUES
 ('01.',051,'01.051.','Province: Al Hoceima','المحافظة: الحسيمة'),
 ('01.',151,'01.151.','Province: Chefchaouen',' شفشاون'),
 ('01.',227,'01.227.','Province: Fahs-Anjra',' الفحص أنجرة'),
