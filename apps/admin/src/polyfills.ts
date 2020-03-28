@@ -5,3 +5,5 @@
  */
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
+// https://stackoverflow.com/questions/54201934/referenceerror-global-is-not-defined-with-stream-and-angular-7-1
+(window as any).global = window;
