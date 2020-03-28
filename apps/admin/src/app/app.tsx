@@ -1,11 +1,16 @@
 import React from 'react';
-import { Admin, Resource, ListGuesser } from 'react-admin';
+import { Admin, ListGuesser, Resource } from 'react-admin';
 import jsonServerProvider from 'ra-data-json-server';
+import authProvider from './authProvider';
 
 export const App = () => {
   return (
-    <Admin dataProvider={jsonServerProvider('https://jsonplaceholder.typicode.com')}>
-      <Resource name="posts" list={ListGuesser} />
+    <Admin
+      title="Tayssir Admin"
+      authProvider={authProvider}
+      dataProvider={jsonServerProvider('https://jsonplaceholder.typicode.com')}
+    >
+      <Resource name="posts" list={ListGuesser}/>
     </Admin>
   );
 };
